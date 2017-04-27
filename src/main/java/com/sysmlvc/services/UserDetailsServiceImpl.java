@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
-import com.sysmlvc.domains.nodes.User;
+import com.sysmlvc.domains.User;
 import com.sysmlvc.repositories.UserRepository;
 import com.sysmlvc.security.UserDetailsImpl;
 

@@ -1,4 +1,4 @@
-package com.sysmlvc.domains.nodes;
+package com.sysmlvc.domains;
 
 import com.sysmlvc.domains.base.Node;
 

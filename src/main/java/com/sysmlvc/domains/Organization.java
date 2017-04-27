@@ -1,15 +1,26 @@
-package com.sysmlvc.domains.nodes;
+package com.sysmlvc.domains;
 
 import com.sysmlvc.domains.base.Node;
 
+import java.util.Set;
+
 /**
- * Created by Jason Han on 1/31/17.
+ * Created by Jason Han on 12/15/16.
  */
 
-public class Role extends Node {
+public class Organization extends Node {
 
+    private Set<Project> projects;
     private User creator;
     private User modifier;
+
+    public Set<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
+    }
 
     public User getCreator() {
         return creator;

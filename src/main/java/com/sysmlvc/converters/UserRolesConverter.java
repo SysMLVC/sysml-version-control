@@ -6,7 +6,7 @@ package com.sysmlvc.converters;
 
 import org.neo4j.ogm.typeconversion.AttributeConverter;
 
-import com.sysmlvc.domains.nodes.User;
+import com.sysmlvc.domains.User;
 
 public class UserRolesConverter implements AttributeConverter<User.SecurityRole[],String[]> {
 

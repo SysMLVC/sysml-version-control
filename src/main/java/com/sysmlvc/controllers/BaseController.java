@@ -8,7 +8,7 @@ import java.security.SecureRandom;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.sysmlvc.domains.nodes.User;
+import com.sysmlvc.domains.User;
 import com.sysmlvc.security.UserDetailsImpl;
 
 public class BaseController {

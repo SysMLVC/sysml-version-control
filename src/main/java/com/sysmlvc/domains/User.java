@@ -1,13 +1,17 @@
-package com.sysmlvc.domains.nodes;
+package com.sysmlvc.domains;
 
 import com.sysmlvc.domains.base.Node;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+import org.neo4j.ogm.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.Relationship;
 import org.neo4j.ogm.annotation.typeconversion.Convert;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -19,6 +23,8 @@ import com.sysmlvc.converters.UserRolesConverter;
  * Created by Jason Han on 12/15/16.
  */
 
+@NodeEntity
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class User extends Node {
 
     private String username;
@@ -33,8 +39,11 @@ public class User extends Node {
     @Convert(UserRolesConverter.class)
     private SecurityRole[] roles;
 
-    private Set<Organization> organizations;
-    private Set<Project> projects;
+    @Relationship(type = "USER_ORGANIZATIONS", direction = Relationship.INCOMING)
+    private Set<Organization> organizations = new HashSet<>();
+
+    @Relationship(type = "USER_PROJECTS", direction = Relationship.INCOMING)
+    private Set<Project> projects = new HashSet<>();
 
     public String getUsername() {
         return username;
@@ -66,6 +75,22 @@ public class User extends Node {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public Set<Organization> getOrganizations() {
+        return organizations;
+    }
+
+    public void setOrganizations(Set<Organization> organizations) {
+        this.organizations = organizations;
+    }
+
+    public Set<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
     }
 
     public SecurityRole[] getRoles() {
@@ -106,7 +131,7 @@ public class User extends Node {
     }
 
     public enum SecurityRole implements GrantedAuthority {
-        ROLE_USER, ROLE_ADMIN;
+        ROLE_USER, ROLE_CONSUMER, ROLE_COLLABORATOR, ROLE_MANAGER, ROLE_ADMIN;
 
         @Override
         public String getAuthority() {

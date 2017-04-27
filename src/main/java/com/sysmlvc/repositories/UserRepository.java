@@ -10,7 +10,7 @@ import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.GraphRepository;
 import org.springframework.stereotype.Repository;
 
-import com.sysmlvc.domains.nodes.User;
+import com.sysmlvc.domains.User;
 
 @Repository
 public interface UserRepository extends GraphRepository<User> {

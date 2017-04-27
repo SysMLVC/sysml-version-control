@@ -2,6 +2,8 @@ package com.sysmlvc.domains.base;
 
 import java.util.Date;
 
+import org.neo4j.ogm.annotation.Relationship;
+
 /**
  * Created by Jason Han on 2/3/17.
  */

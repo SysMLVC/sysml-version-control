@@ -11,7 +11,7 @@ import java.util.Collections;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.sysmlvc.domains.nodes.User;
+import com.sysmlvc.domains.User;
 
 public class UserDetailsImpl implements UserDetails {
     private final User user;

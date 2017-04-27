@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sysmlvc.domains.nodes.User;
+import com.sysmlvc.domains.User;
 import com.sysmlvc.repositories.UserRepository;
 import com.sysmlvc.security.JwtAuthenticationResponse;
 import com.sysmlvc.security.JwtAuthenticationRequest;
