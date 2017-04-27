@@ -3,7 +3,6 @@ package com.sysmlvc.domains.base;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
@@ -15,7 +14,6 @@ import org.neo4j.ogm.annotation.typeconversion.DateLong;
  */
 
 @NodeEntity
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
 public class Node {
 

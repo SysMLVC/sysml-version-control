@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
@@ -24,7 +23,6 @@ import com.sysmlvc.converters.UserRolesConverter;
  */
 
 @NodeEntity
-@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class User extends Node {
 
     private String username;

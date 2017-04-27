@@ -2,12 +2,13 @@ package com.sysmlvc.domains.base;
 
 import java.util.Date;
 
-import org.neo4j.ogm.annotation.Relationship;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * Created by Jason Han on 2/3/17.
  */
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Edge {
 
     private Long id;
