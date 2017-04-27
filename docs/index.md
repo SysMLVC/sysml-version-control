@@ -1,0 +1,1 @@
+SysML Version Control is an open source attempt to create a version control server for SysML elements. The aim of the project is to be highly scalable and to keep accurate version history.

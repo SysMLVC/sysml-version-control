@@ -1,0 +1,20 @@
+# SSL Configuration
+server.port=8443
+server.ssl.key-store=classpath:keystore.jks
+server.ssl.key-store-password=secret
+
+# Jackson
+spring.jackson.date-format=com.fasterxml.jackson.databind.util.ISO8601DateFormat
+
+# Authentication
+jwt.header=Authorization
+jwt.secret=secret
+jwt.expiration=604800
+
+# Mail Settings
+mail.smtp.auth=true
+mail.smtp.port=587
+mail.smtp.starttls.enable=true
+mail.smtp.host=somehost
+mail.username=someusername
+mail.password=somepassword
